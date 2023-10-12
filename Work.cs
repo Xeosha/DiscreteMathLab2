@@ -166,7 +166,7 @@ namespace DiscreteMathLab2
             {
                 for (int j = 0; j < _size; j++)
                 {
-                    if (i != j && matrix[i, j])
+                    if (i != j && matrix[i, j]) 
                     {
                         return false;
                     }
