@@ -57,8 +57,6 @@ namespace DiscreteMathLab2
                 Console.WriteLine(e.Message);
             }
 
-            
-            
             return result;
            
         }

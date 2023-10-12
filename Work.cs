@@ -29,18 +29,9 @@ namespace DiscreteMathLab2
             _size = size;
             matrix = new bool[size, size];
         }
-        public void StringToInt(string[] rows)
-        {
-            if (rows == null || rows.Length != _size) return;
-            for (int i = 0; i < _size; i++)
-            {
-                string[] rowWithNum = rows[i].Split(' ');
-                for (int j = 0; j < _size; j++)
-                {
-                    matrix[i, j] = Convert.ToBoolean(int.Parse(rowWithNum[j]));
-                }
-            }
 
+        void newProperies()
+        {
             properties = new Propertie[]
             {
                 new Propertie("рефлексивное", isReflection),
@@ -52,6 +43,20 @@ namespace DiscreteMathLab2
                 new Propertie("полное(связное)", isCompletence)
 
             };
+        }
+
+        public void StringToInt(string[] rows)
+        {
+            if (rows == null || rows.Length != _size) return;
+            for (int i = 0; i < _size; i++)
+            {
+                string[] rowWithNum = rows[i].Split(' ');
+                for (int j = 0; j < _size; j++)
+                {
+                    matrix[i, j] = Convert.ToBoolean(int.Parse(rowWithNum[j]));
+                }
+            }
+            newProperies();
         }
 
         public void PrintMatrix()
@@ -161,7 +166,7 @@ namespace DiscreteMathLab2
             {
                 for (int j = 0; j < _size; j++)
                 {
-                    if (!(i != j && matrix[i, j]))
+                    if (i != j && matrix[i, j])
                     {
                         return false;
                     }
