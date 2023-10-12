@@ -41,7 +41,6 @@ namespace DiscreteMathLab2
                 new Propertie("асимметричное", isAsymmetric),
                 new Propertie("транзитивное", isTransitive),
                 new Propertie("полное(связное)", isCompletence)
-
             };
         }
 
@@ -166,7 +165,7 @@ namespace DiscreteMathLab2
             {
                 for (int j = 0; j < _size; j++)
                 {
-                    if (i != j && matrix[i, j]) 
+                    if (i != j && matrix[i, j])
                     {
                         return false;
                     }
