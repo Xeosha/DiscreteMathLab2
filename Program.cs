@@ -12,7 +12,7 @@ namespace DiscreteMathLab2
             var options = new[]
             {
                 new Options("Вывести содержимое файла на экран: ", PrintFile),
-                new Options("Вывести хар-ки на экран: ", Show)
+                new Options("Вывести хар-ки на экран: ", Show),
             };
 
             Menu menu = new Menu(options);

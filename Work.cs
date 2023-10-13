@@ -129,7 +129,7 @@ namespace DiscreteMathLab2
             {
                 for (int j = i + 1; j < _size; j++)
                 {
-                    if (matrix[i, j] == matrix[j, i])
+                    if (matrix[i,j] && matrix[j, i])
                         return false;
                 }
             }
@@ -163,12 +163,10 @@ namespace DiscreteMathLab2
         {
             for (int i = 0; i < _size; i++)
             {
-                for (int j = 0; j < _size; j++)
+                for (int j = i + 1; j < _size; j++)
                 {
-                    if (i != j && !matrix[i, j])
-                    {
+                    if (!matrix[i, j] && !matrix[j, i])
                         return false;
-                    }
                 }
             }
             return true;
